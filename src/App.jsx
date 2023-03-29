@@ -11,7 +11,8 @@ import Reservations from './pages/Reservations'
 import CreateReservations from './pages/CreatePost'
 import View from './pages/View'
 
-axios.defaults.baseURL = "http://localhost:4000/api"
+// axios.defaults.baseURL = "http://localhost:4000/api"
+axios.defaults.baseURL = "https://pmish-car-rentals-api.herokuapp.com/api"
 //allows it to accept cookies, when being sent from different hosts 
 axios.defaults.withCredentials = true 
 
