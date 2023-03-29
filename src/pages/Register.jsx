@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import axios from 'axios'
+import { UserContext } from '../context/UserContext'
 
 function Register() {
     const [name, setName] = useState("")
@@ -9,6 +10,11 @@ function Register() {
     const [password, setPassword] = useState("")
 
     let navigate = useNavigate()
+
+    const {user} = useContext(UserContext)
+    if (user) {
+        return <Navigate to='/account' />
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()

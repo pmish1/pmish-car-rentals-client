@@ -18,7 +18,7 @@ axios.defaults.withCredentials = true
 
 function App() {
     const {user} = useContext(UserContext)
-
+    
     const ProtectedRoutes = ({children}) => {
         if (!user) {
             return <Navigate to='/login' />
@@ -37,8 +37,8 @@ function App() {
 
                 <Route path='/account' element={<ProtectedRoutes> <Account/> </ProtectedRoutes>} />
                 <Route path='/account/reservations' element={<ProtectedRoutes> <Reservations/> </ProtectedRoutes>} />
-                <Route path='/account/create' element={<ProtectedRoutes> <CreateReservations/> </ProtectedRoutes>} />
-                <Route path="/account/create/:id" element={<ProtectedRoutes> <CreateReservations/> </ProtectedRoutes>} />
+                <Route path='/account/create' element={<CreateReservations/>} />
+                <Route path="/account/create/:id" element={<CreateReservations/>} />
 
                 <Route path='/view/:id' element={<View /> } />
 

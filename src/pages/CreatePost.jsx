@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
 import PhotosUploader from '../components/PhotosUploader'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
 
 function CreatePost() {
     const [title, setTitle] = useState("")
@@ -14,6 +15,10 @@ function CreatePost() {
     const [fuel, setFuel] = useState("")
     let navigate = useNavigate()
 
+    const {user} = useContext(UserContext)
+    if (!user) {
+        return <Navigate to='/login' />
+    }
 
     let {id} = useParams()
 

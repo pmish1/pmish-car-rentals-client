@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import axios from 'axios'
 import { UserContext } from '../context/UserContext'
@@ -9,6 +9,11 @@ function Login() {
     const [password, setPassword] = useState("")
     const {setUser} = useContext(UserContext)
     let navigate = useNavigate()
+
+    const {user} = useContext(UserContext)
+    if (user) {
+        return <Navigate to='/account' />
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
