@@ -15,11 +15,11 @@ function Header() {
                 <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
             </svg>
 
-                <h1 className='font-bold text-xl'>RentACar</h1>
+                <h1 className='font-bold text-xl xl:mt-1'>RentACar</h1>
             </Link>
         </div>
         {/* search */}
-        <div className='flex border border-gray-300 py-1 px-5 rounded-full items-center gap-2 shadow-md'>
+        <div className='hidden flex border border-gray-300 py-1 px-5 rounded-full items-center gap-2 shadow-md lg:inline-flex xl:inline-flex 2xl:inline-flex md:inline-flex'>
             <h1 className='pr-1 border-r-2 border-gray-300'>Anywhere</h1>
             <h1 className='pr-1 border-r-2 border-gray-300'>Any time</h1>
             <h1>Search cars</h1>

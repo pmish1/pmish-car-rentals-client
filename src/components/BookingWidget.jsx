@@ -45,8 +45,8 @@ function BookingWidget({price}) {
     }  
 
   return (
-    <div className='flex flex-col bg-white shadow-lg shadow-gray-300 rounded-xl mt-5 mr-5 mb-5'>
-        <form className='flex flex-col px-4 py-3' onSubmit={handleSubmit}> 
+    <div className='flex flex-col bg-gray-200 mb-5 w-screen justicy-center xl:w-full mt-7'>
+        <form className='flex flex-col py-3 px-5 mx-5 shadow-lg shadow-gray-400 bg-white rounded-xl' onSubmit={handleSubmit}> 
             <h1 className='text-xl font-semibold mt-2 text-center'>Book here</h1>
             <input 
                 type="text" 
