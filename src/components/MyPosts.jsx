@@ -19,13 +19,11 @@ function MyPosts({user}) {
             }
         }
         getUserPosts()
-    }, [])
+    }, [userPosts])
 
     const handleDelete = async (id) => {
         try {
             const response = await axios.delete(`/delete/${id}`, {headers: {Authorization: '***'}})
-            navigate('/account')
-
         } catch (error) {
             console.log(error)
         }

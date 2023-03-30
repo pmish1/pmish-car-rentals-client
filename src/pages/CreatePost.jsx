@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
 import PhotosUploader from '../components/PhotosUploader'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Navigate, redirect, useNavigate, useParams } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 
 function CreatePost() {
@@ -41,6 +41,7 @@ function CreatePost() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        console.log('handel sumbit ran')
 
         if (id) {
             //update post 
@@ -53,7 +54,7 @@ function CreatePost() {
                     features: [formFactor, drive, fuel],
                     id
                 })
-                navigate('/account')
+
             } catch (error) {
                 console.log(error)
             }
@@ -72,6 +73,7 @@ function CreatePost() {
                 console.log(error)
             }
         }
+        return navigate('/account')
     }
 
   return (
