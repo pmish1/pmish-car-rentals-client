@@ -32,11 +32,12 @@ function PhotosUploader({photos, setPhotos}) {
             onChange={uploadPhoto}
         />
 
-        <div className='grid grid-cols-3'>
+        {/* <div className='grid grid-cols-3'> */}
+        <div className='flex flex-col items-center xl:grid xl:grid-cols-3'>
             {photos.length > 0  && photos.map((link) => {
                 return (
-                    <div  key={Math.random()} className="w-72"> 
-                        <img src={link} alt="" className=""/>
+                    <div  key={Math.random()} className=""> 
+                        <img src={link} alt="" className="mb-2"/>
                     </div>
                 )
             })}

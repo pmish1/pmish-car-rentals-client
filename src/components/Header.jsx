@@ -5,7 +5,7 @@ import { UserContext } from '../context/UserContext'
 function Header() {
     const {user} = useContext(UserContext)
   return (
-    <header className='flex justify-between items-center px-5 pb-4 mt-5 shadow-md'>
+    <header className='flex justify-between items-center px-5 pb-4 mt-5 shadow-md shadow-gray-100'>
         <div>
             {/* logo */}
             <Link to='/' className='flex gap-2 items-center'>
