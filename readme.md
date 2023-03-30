@@ -9,4 +9,4 @@ TECH STACK:
 - ReactJS, Tailwind CSS, 'axios' for front-end
 - AWS S3 buckets used for uploading photos (with custom policy). 
 - JsonWebToken and 'bcrypt' used for authentication.
-- Client side deployed on Netflify with REST API hosted on Heroku. 
+- Front-end deployed on Netflify with back-end hosted on Heroku. 
